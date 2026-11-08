@@ -1,0 +1,13 @@
+services:
+  front-ambient:
+    container_name: front-ambient
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: front-ambient:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+ 
